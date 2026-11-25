@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: financial-audit-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: financial_audit
+      POSTGRES_USER: audit_user
+      POSTGRES_PASSWORD: audit_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

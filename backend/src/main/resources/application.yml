@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: financial-audit-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/financial_audit
+    username: audit_user
+    password: audit_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+server:
+  port: 8080

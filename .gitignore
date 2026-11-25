@@ -1,0 +1,12 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Environment variables
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
